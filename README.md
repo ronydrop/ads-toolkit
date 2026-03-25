@@ -64,6 +64,13 @@ ads-toolkit/
 
 ## Instalação — OpenClaw
 
+**Windows (PowerShell):**
+```powershell
+git clone https://github.com/ronydrop/ads-toolkit.git "$env:USERPROFILE\.openclaw\extensions\ads-toolkit"
+openclaw gateway restart
+```
+
+**Linux/macOS:**
 ```bash
 git clone https://github.com/ronydrop/ads-toolkit.git ~/.openclaw/extensions/ads-toolkit
 openclaw gateway restart
@@ -75,14 +82,22 @@ openclaw gateway restart
 
 ## Instalação — Claude Code
 
+**Windows (PowerShell):**
+```powershell
+git clone https://github.com/ronydrop/ads-toolkit.git "$env:TEMP\ads-toolkit"
+Set-Location "$env:TEMP\ads-toolkit"
+.\claude\install.ps1
+```
+
+**Linux/macOS:**
 ```bash
 git clone https://github.com/ronydrop/ads-toolkit.git /tmp/ads-toolkit
 bash /tmp/ads-toolkit/claude/install.sh
 ```
 
 O script instala:
-- Skills em `~/.claude/skills/ads/`
-- Comandos em `~/.claude/commands/`
+- Skills em `~/.claude/skills/ads/` (Linux/macOS) ou `%USERPROFILE%\.claude\skills\ads\` (Windows)
+- Comandos em `~/.claude/commands/` ou `%USERPROFILE%\.claude\commands\`
 - `CLAUDE.md` na pasta atual (contexto da operação)
 
 Ver `claude/README.md` para configuração dos MCPs.
@@ -91,6 +106,16 @@ Ver `claude/README.md` para configuração dos MCPs.
 
 ## Atualizar
 
+**Windows (PowerShell):**
+```powershell
+# OpenClaw
+Set-Location "$env:USERPROFILE\.openclaw\extensions\ads-toolkit"; git pull; openclaw gateway restart
+
+# Claude Code
+Set-Location "$env:TEMP\ads-toolkit"; git pull; .\claude\install.ps1
+```
+
+**Linux/macOS:**
 ```bash
 # OpenClaw
 cd ~/.openclaw/extensions/ads-toolkit && git pull && openclaw gateway restart
