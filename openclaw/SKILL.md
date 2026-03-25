@@ -16,20 +16,33 @@ Plugin de performance marketing calibrado para a operação do Rony Oliveira.
 
 ## Skills Disponíveis
 
-Cada skill é um arquivo em `/root/.openclaw/extensions/ads-toolkit/skills/`.
-Algumas skills dependem de outras e indicam qual carregar primeiro.
+Cada skill é um arquivo em `/root/.openclaw/extensions/ads-toolkit/openclaw/skills/`.
 
+### Skills de Base (carregar sempre que relevante)
+| Skill | Descrição |
+|-------|-----------|
+| `account-conventions` | Nomenclatura e estrutura das contas |
+| `ad-copy-principles` | Regras e ângulos de copy |
+| `performance-analysis` | Metodologia de análise de métricas |
+| `search-term-methodology` | Critérios para negativar/manter search terms |
+| `quality-gates` | Regras absolutas de qualidade (3x Kill Rule, Learning Phase, etc.) |
+
+### Skills de Workflow
 | Skill | Descrição | Depende de |
 |-------|-----------|------------|
-| `account-conventions` | Nomenclatura e estrutura das contas | — |
-| `ad-copy-principles` | Regras e ângulos de copy | — |
-| `performance-analysis` | Metodologia de análise de métricas | — |
-| `search-term-methodology` | Critérios para negativar/manter search terms | — |
 | `audit-ad-copy` | Auditoria de copy existente | account-conventions, ad-copy-principles |
-| `budget-optimize` | Otimização e realocação de orçamento | performance-analysis, account-conventions |
+| `budget-optimize` | Otimização de orçamento | performance-analysis, account-conventions |
 | `investigate-campaign` | Diagnóstico aprofundado de campanha | account-conventions, performance-analysis |
-| `mine-search-terms` | Mineração de search terms | search-term-methodology, account-conventions |
+| `mine-search-terms` | Mineração de search terms Google | search-term-methodology, account-conventions |
 | `weekly-review` | Revisão semanal completa | performance-analysis, account-conventions |
+
+### Skills de Operação Avançada
+| Skill | Descrição | Depende de |
+|-------|-----------|------------|
+| `spy` | Inteligência competitiva via Meta Ad Library | account-conventions |
+| `bleed-check` | Detecta adsets sangrando (spend sem lead) | quality-gates |
+| `fatigue-scan` | Monitora fadiga criativa com análise de tendência | ad-copy-principles |
+| `rebalance` | Realocação de budget por CPL | performance-analysis, quality-gates |
 
 ## Slash Commands
 
@@ -37,14 +50,18 @@ Algumas skills dependem de outras e indicam qual carregar primeiro.
 |---------|-----------|-------------------|
 | `/rsa` | Cria/renova copy Google RSA (15 headlines + 4 descrições) | ad-copy-principles, account-conventions |
 | `/copy-meta` | Cria copy para Meta Ads | ad-copy-principles, account-conventions |
-| `/meta-performance` | Panorama de performance Meta (7d e 30d) | performance-analysis |
-| `/google-performance` | Panorama de performance Google (7d e 30d) | performance-analysis |
-| `/meta-audit` | Auditoria completa Meta Ads | budget-optimize, audit-ad-copy |
-| `/google-audit` | Auditoria completa Google Ads | mine-search-terms, audit-ad-copy |
-| `/weekly-review` | Revisão semanal Meta + Google | weekly-review |
+| `/meta-performance` | Panorama de performance Meta (7d e 30d) | performance-analysis, quality-gates |
+| `/google-performance` | Panorama de performance Google (7d e 30d) | performance-analysis, quality-gates |
+| `/meta-audit` | Auditoria completa Meta Ads | budget-optimize, audit-ad-copy, quality-gates |
+| `/google-audit` | Auditoria completa Google Ads | mine-search-terms, audit-ad-copy, quality-gates |
+| `/weekly-review` | Revisão semanal Meta + Google | weekly-review, quality-gates |
 | `/investigate [campanha]` | Diagnóstico de campanha específica | investigate-campaign |
 | `/mine-search-terms` | Analisa search terms para negativar | mine-search-terms |
 | `/budget` | Sugere realocação de orçamento | budget-optimize |
+| `/spy` | Inteligência competitiva de concorrentes | spy |
+| `/bleed-check` | Verifica adsets sangrando agora | bleed-check, quality-gates |
+| `/fatigue-scan` | Análise de fadiga criativa (14 dias) | fatigue-scan |
+| `/rebalance` | Plano de realocação de budget por CPL | rebalance, quality-gates |
 
 ## Como Usar
 
