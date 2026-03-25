@@ -43,6 +43,10 @@ Cada skill é um arquivo em `/root/.openclaw/extensions/ads-toolkit/openclaw/ski
 | `bleed-check` | Detecta adsets sangrando (spend sem lead) | quality-gates |
 | `fatigue-scan` | Monitora fadiga criativa com análise de tendência | ad-copy-principles |
 | `rebalance` | Realocação de budget por CPL | performance-analysis, quality-gates |
+| `hooks` | Gera N variações de copy com frameworks PAS/BAB/AIDA | ad-copy-principles, account-conventions |
+| `audience-audit` | Auditoria de arquitetura de audiências e sobreposições | account-conventions |
+| `deploy-ads` | Deploy em massa de campanhas via manifest JSON | account-conventions |
+| `benchmarks` | Benchmarks de mercado 2026 (carregar automaticamente) | — |
 
 ## Slash Commands
 
@@ -62,6 +66,9 @@ Cada skill é um arquivo em `/root/.openclaw/extensions/ads-toolkit/openclaw/ski
 | `/bleed-check` | Verifica adsets sangrando agora | bleed-check, quality-gates |
 | `/fatigue-scan` | Análise de fadiga criativa (14 dias) | fatigue-scan |
 | `/rebalance` | Plano de realocação de budget por CPL | rebalance, quality-gates |
+| `/hooks` | Gera variações de copy com frameworks PAS/BAB/AIDA | hooks, ad-copy-principles |
+| `/audience-audit` | Auditoria de sobreposição de audiências | audience-audit |
+| `/deploy-ads` | Deploy em massa via manifest JSON (dry-run por padrão) | deploy-ads |
 
 ## Como Usar
 
