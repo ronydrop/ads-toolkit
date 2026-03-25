@@ -1,0 +1,25 @@
+{
+  "mcpServers": {
+    "fb-ads-mcp-server": {
+      "command": "npx",
+      "args": ["-y", "fb-ads-mcp-server"],
+      "env": {
+        "FB_ACCESS_TOKEN": "${FB_ACCESS_TOKEN}",
+        "FB_APP_ID": "${FB_APP_ID}",
+        "FB_APP_SECRET": "${FB_APP_SECRET}",
+        "FB_AD_ACCOUNT_ID": "${FB_AD_ACCOUNT_ID}"
+      }
+    },
+    "mcp-google-ads": {
+      "command": "npx",
+      "args": ["-y", "mcp-google-ads"],
+      "env": {
+        "GOOGLE_ADS_DEVELOPER_TOKEN": "${GOOGLE_ADS_DEVELOPER_TOKEN}",
+        "GOOGLE_ADS_CLIENT_ID": "${GOOGLE_ADS_CLIENT_ID}",
+        "GOOGLE_ADS_CLIENT_SECRET": "${GOOGLE_ADS_CLIENT_SECRET}",
+        "GOOGLE_ADS_REFRESH_TOKEN": "${GOOGLE_ADS_REFRESH_TOKEN}",
+        "GOOGLE_ADS_CUSTOMER_ID": "${GOOGLE_ADS_CUSTOMER_ID}"
+      }
+    }
+  }
+}
