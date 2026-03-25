@@ -1,6 +1,6 @@
 ---
 description: Mineração de search terms Google Ads para negativas e oportunidades de keyword
-argument-hint: [conta_id] [período]
+argument-hint: "[conta_id] [período]"
 ---
 
 # /mine-search-terms — Mineração de Search Terms Google Ads

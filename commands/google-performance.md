@@ -1,6 +1,6 @@
 ---
 description: Panorama de performance Google Ads — CPA, CPC, conversões, CTR por campanha
-argument-hint: [conta_id] [período]
+argument-hint: "[conta_id] [período]"
 ---
 
 # /google-performance — Panorama de Performance Google Ads

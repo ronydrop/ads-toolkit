@@ -1,6 +1,6 @@
 ---
 description: Criar ou renovar copy Google RSA — 15 headlines + 4 descrições validadas
-argument-hint: [produto] [ângulo]
+argument-hint: "[produto] [ângulo]"
 ---
 
 # /rsa — Criar/Renovar Copy Google RSA

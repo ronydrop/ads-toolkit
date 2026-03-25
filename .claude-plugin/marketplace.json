@@ -1,0 +1,18 @@
+{
+  "name": "ads-toolkit",
+  "owner": {
+    "name": "Rony"
+  },
+  "metadata": {
+    "description": "Performance marketing toolkit para Meta Ads e Google Ads",
+    "homepage": "https://github.com/ronydrop/ads-toolkit"
+  },
+  "plugins": [
+    {
+      "name": "ads-toolkit",
+      "version": "1.0.0",
+      "source": ".",
+      "description": "Performance marketing toolkit para Meta Ads e Google Ads. 18 skills + 16 comandos para análise, copy, otimização e auditoria."
+    }
+  ]
+}
