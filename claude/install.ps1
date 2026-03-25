@@ -37,4 +37,4 @@ Write-Host "  /rebalance         /hooks               /audience-audit"
 Write-Host "  /deploy-ads"
 Write-Host ""
 Write-Host "Lembre de configurar os MCPs em %USERPROFILE%\.claude\settings.json" -ForegroundColor Yellow
-Write-Host "Ver claude\README.md para instrucoes."
+Write-Host "Ver claude\README.md para instrucoes"
