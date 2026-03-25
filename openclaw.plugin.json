@@ -1,0 +1,32 @@
+{
+  "id": "ads-toolkit",
+  "name": "Ads Toolkit",
+  "description": "Performance marketing toolkit para Meta Ads e Google Ads. Skills de análise, copy, otimização de budget e auditoria calibradas para a operação do Rony Oliveira (Aprovei Pay, Aprovei Checkout e ofertas escaladas).",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "defaultMetaAccount": {
+        "type": "string",
+        "default": "act_1930115874158365"
+      },
+      "defaultGoogleCustomerId": {
+        "type": "string",
+        "default": "7812295635"
+      },
+      "roasMinimum": {
+        "type": "number",
+        "default": 2.0
+      },
+      "cplMaxAprovei": {
+        "type": "number",
+        "default": 80
+      },
+      "currency": {
+        "type": "string",
+        "default": "BRL"
+      }
+    },
+    "required": []
+  }
+}
