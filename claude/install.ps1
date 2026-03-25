@@ -1,4 +1,4 @@
-# ads-toolkit — Claude Code Edition installer (Windows PowerShell)
+﻿# ads-toolkit — Claude Code Edition installer (Windows PowerShell)
 # Executar: .\install.ps1
 
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
