@@ -17,6 +17,14 @@ mkdir -p ~/.claude/commands
 cp "$SCRIPT_DIR/commands/"*.md ~/.claude/commands/
 echo "✅ Comandos instalados em ~/.claude/commands/"
 
+# CLAUDE.md (contexto da operação — copiar para o projeto de ads)
+if [ ! -f "CLAUDE.md" ]; then
+  cp "$SCRIPT_DIR/CLAUDE.md" ./CLAUDE.md
+  echo "✅ CLAUDE.md criado no diretório atual"
+else
+  echo "⚠️  CLAUDE.md já existe — não sobrescrevendo. Verifique manualmente."
+fi
+
 echo ""
 echo "✅ ads-toolkit instalado com sucesso!"
 echo ""
