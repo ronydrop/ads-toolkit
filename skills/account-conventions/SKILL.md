@@ -1,29 +1,10 @@
 ---
 name: account-conventions
-description: Convenções de nomenclatura e estrutura das contas Meta Ads e Google Ads. Triggers on "nomes de campanha", "prefixos", "interpretação de estrutura", "qual conta", "nomenclatura".
+description: Convenções de nomenclatura e estrutura das contas Google Ads. Triggers on "nomes de campanha", "prefixos", "interpretação de estrutura", "qual conta", "nomenclatura".
 ---
 
-Convenções de nomenclatura e estrutura das contas de ads do Rony Oliveira.
+Convenções de nomenclatura e estrutura das contas Google Ads do Rony Oliveira.
 Carregada por outras skills antes de interpretar nomes de campanhas.
-
-## Meta Ads
-- Conta: act_1930115874158365
-- Moeda: BRL (API retorna USD — multiplicar por 5.80)
-- Prefixos de campanha:
-  - [CBO] = Campaign Budget Optimization (escala)
-  - [ABO] = Ad Set Budget Optimization (controle individual)
-  - [TOPO F] = Topo de funil (público frio)
-  - [MEIO F] = Meio de funil (engajamento/retargeting)
-  - [FUNDO F] = Fundo de funil (quente/remarketing)
-  - [SR] = Smart Remarketing
-- Nomes de criativos:
-  - video01, video02... = vídeos em ordem de teste
-  - post01, post02... = imagens/carrosséis
-  - toguro = personagem/abordagem com social proof
-  - patterninterrupt = copy de disrupção
-  - humor = abordagem humorística
-  - provocativo = copy provocatório/polêmico
-  - socialproof = depoimento ou prova social
 
 ## Google Ads
 - Contas disponíveis: 7812295635 (principal), 7463577725, 3826677437, 1661726884, 7496711288, 8996438094

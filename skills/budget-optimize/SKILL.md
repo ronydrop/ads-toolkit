@@ -1,27 +1,27 @@
 ---
 name: budget-optimize
-description: Otimização e realocação de orçamento entre campanhas Meta e Google Ads. Triggers on "otimiza budget", "redistribui orçamento", "limited by budget", "escalar campanha", "cortar campanha".
+description: Otimização e realocação de orçamento entre campanhas Google Ads. Triggers on "otimiza budget", "redistribui orçamento", "limited by budget", "escalar campanha", "cortar campanha".
 ---
 
-Otimização e realocação de orçamento entre campanhas.
+Otimização e realocação de orçamento entre campanhas Google Ads.
 Carregar performance-analysis e account-conventions antes.
 
 ## Princípios de Budget
 
-1. **Nunca cortar o que está funcionando** — se CPL está bom e volume é suficiente, aumentar
+1. **Nunca cortar o que está funcionando** — se CPA está bom e volume é suficiente, aumentar
 2. **Dados mínimos antes de decisão** — pelo menos 3 dias de dados para pausar; 7 dias para escalar
 3. **Realocação > corte** — tirar budget de campanha ruim e colocar na boa
 4. **Escala gradual** — aumentar no máximo 20-30% por vez para não desestabilizar o algoritmo
 
-## Regras de Decisão Meta Ads
+## Quality Gates
 
-| Situação | Ação |
-|----------|------|
-| CPL bom (<R$80) + budget limitando entrega | Aumentar 20-30% |
-| CPL ruim (>R$120) há 3+ dias | Pausar ou reduzir 50% |
-| CPL médio (R$80-120) | Testar novo criativo antes de mexer no budget |
-| Zero leads há 48h com spend ativo | Pausar imediatamente |
-| CBO com 1 adset dominando >80% | Verificar se outros adsets têm chance |
+### 3x Kill Rule
+Campanha com CPA > 3x a meta → flaggar para pausa imediata. Prioridade sobre "aguardar dados".
+
+### Smart Bidding
+- Nunca recomendar Broad Match sem Smart Bidding ativo
+- Smart Bidding requer mínimo 15 conversões/mês
+- Abaixo de 15 conv/mês: usar CPC manual ou Max Clicks
 
 ## Regras de Decisão Google Ads
 
@@ -35,14 +35,15 @@ Carregar performance-analysis e account-conventions antes.
 ## Workflow de Otimização Semanal
 
 1. Puxar performance dos últimos 7 dias
-2. Calcular CPL/CPA de cada campanha ativa
-3. Ordenar do melhor ao pior CPL
-4. Identificar campanhas "limited by budget"
-5. Calcular redistribuição:
-   - Tirar X% das campanhas com CPL ruim
-   - Colocar nas campanhas com CPL bom e limitação de budget
-6. Apresentar tabela antes/depois para aprovação do Rony
-7. **Nunca executar mudança de budget sem confirmação**
+2. Converter micros para BRL (÷ 1.000.000)
+3. Calcular CPA de cada campanha ativa
+4. Ordenar do melhor ao pior CPA
+5. Identificar campanhas "limited by budget"
+6. Calcular redistribuição:
+   - Tirar X% das campanhas com CPA ruim
+   - Colocar nas campanhas com CPA bom e limitação de budget
+7. Apresentar tabela antes/depois para aprovação do Rony
+8. **Nunca executar mudança de budget sem confirmação**
 
 ## Query Google Ads para Budget Analysis
 ```sql
@@ -61,7 +62,7 @@ ORDER BY metrics.cost_micros DESC
 
 ## Campanhas Atuais (referência)
 
-| Campanha | Budget Atual | CPL | Status |
+| Campanha | Budget Atual | CPA | Status |
 |----------|-------------|-----|--------|
 | [SR][Gateway] Aprovei.ai | verificar | R$10,47/conv (30d) | ENABLED |
 | [BLUE][LEADS][INSTITUCIONAL] | verificar | R$2,99/conv (30d) | ENABLED |

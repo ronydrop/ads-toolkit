@@ -1,9 +1,9 @@
 ---
 name: ad-copy-principles
-description: Princípios e regras de copy para anúncios Meta Ads e Google Ads RSA. Triggers on "gerar copy", "auditar copy", "RSA", "headlines", "criativo", "anúncio", "texto de ad".
+description: Princípios e regras de copy para anúncios Google Ads RSA. Triggers on "gerar copy", "auditar copy", "RSA", "headlines", "anúncio", "texto de ad".
 ---
 
-Princípios e regras de copy para todos os anúncios da operação.
+Princípios e regras de copy para anúncios Google Ads RSA.
 Carregada por audit-ad-copy e rsa antes de gerar ou avaliar qualquer copy.
 
 ## Tom e Voz
@@ -11,16 +11,6 @@ Carregada por audit-ad-copy e rsa antes de gerar ou avaliar qualquer copy.
 - Foco em benefício concreto (não feature, sim resultado)
 - Adaptar ao público: mais técnico para vendedores B2B, mais emocional para empreendedores
 - Nunca genérico — usar números, dados e provas sempre que possível
-
-## Ângulos por Performance (do melhor para o pior)
-
-| Ângulo | CTR Meta | Melhor uso |
-|--------|----------|------------|
-| Social Proof | 1.9% | Público frio e retargeting |
-| Pattern Interrupt | 1.9% | Público frio |
-| Humor | 1.4% | Público mais jovem, produto menos técnico |
-| Polêmico/Provocativo | 0.9% | Retargeting, já conhecem o produto |
-| Urgência pura | 0.3% | Nunca sozinha — combinar com outro ângulo |
 
 ## Regras Google RSA (Responsive Search Ads)
 - 15 headlines, máx 30 chars cada (incluindo espaços)
@@ -31,12 +21,6 @@ Carregada por audit-ad-copy e rsa antes de gerar ou avaliar qualquer copy.
 - Pelo menos 2 com diferencial competitivo
 - Nunca repetir o mesmo conceito em 2 headlines
 - Sempre validar contagem de chars antes de entregar
-
-## Regras Meta Ads
-- Headline: 1 linha, punch imediato
-- Corpo: 2-4 linhas máximo para mobile
-- CTA: sempre explícito e ativo ("Cadastre-se", "Clique aqui", "Saiba mais")
-- Emojis: usar com moderação, 1-2 por anúncio, reforçando o conteúdo
 
 ## Propostas de Valor Aprovadas (Aprovei Pay)
 - Saldo livre em 2 dias úteis

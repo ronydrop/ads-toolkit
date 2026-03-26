@@ -1,6 +1,4 @@
 {
-  "name": "ads-toolkit",
-  "description": "Performance marketing toolkit para Meta Ads e Google Ads. 18 skills + 16 comandos para análise, copy, otimização e auditoria.",
-  "version": "1.0.0",
-  "keywords": ["advertising", "meta-ads", "google-ads", "marketing", "performance"]
+  "name": "google-ads-toolkit",
+  "description": "Google Ads performance toolkit — análise, copy RSA, otimização e auditoria."
 }

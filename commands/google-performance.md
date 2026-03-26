@@ -5,7 +5,7 @@ argument-hint: "[conta_id] [período]"
 
 # /google-performance — Panorama de Performance Google Ads
 
-Carregar skills: performance-analysis, account-conventions, benchmarks.
+Carregar skills: performance-analysis, account-conventions.
 
 ## Workflow
 1. Puxar performance Google Ads (days=30) para todas as contas ativas
