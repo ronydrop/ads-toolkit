@@ -1,3 +1,11 @@
 {
-  "mcpServers": {}
+  "mcpServers": {
+    "mcp-meta-ads": {
+      "command": "npx",
+      "args": ["-y", "facebook-ads-mcp-server"],
+      "env": {
+        "FB_ACCESS_TOKEN": "${FB_ACCESS_TOKEN}"
+      }
+    }
+  }
 }
